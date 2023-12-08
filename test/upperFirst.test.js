@@ -19,4 +19,12 @@ describe("upperFirst", () => {
     expect(upperFirst("this is a smiley face \ud83d\ude00\u0000")).to.equal("This is a smiley face \ud83d\ude00\u0000")
  });
 
+ it("convert an empty string to upper case", () =>{
+   expect(upperFirst("")).to.equal("")
+ });
+
+ it("convert a string starting with a number to upper case", () =>{
+   expect(upperFirst("1test")).to.equal("1test")
+ });
+
 })
