@@ -27,4 +27,24 @@ describe("toString", () => {
     expect(toString(-0)).to.equal("-0")
  });
 
+ it("convert an empty string to string", () =>{
+   expect(toString("")).to.equal("")
+ });
+
+ it("convert an object to string", () =>{
+   expect(toString(new Number(2023))).to.equal("2023")
+ });
+
+ it("convert a boolean to string", () =>{
+   expect(toString(true)).to.equal("true")
+ });
+
+ it("convert a null to string", () =>{
+   expect(toString(null)).to.equal("")
+ });
+
+ it("convert an undefined to string", () =>{
+   expect(toString(undefined)).to.equal("")
+ });
+
 })
