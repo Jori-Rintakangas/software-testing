@@ -23,4 +23,8 @@ describe("isDate", () => {
     expect(isDate({})).to.be.false
  });
 
+ it("check that a boolean is not a date", () =>{
+   expect(isDate(true)).to.be.false
+ });
+
 })
