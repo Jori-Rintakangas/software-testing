@@ -33,7 +33,7 @@ describe('isEmpty', () => {
       expect(result).to.be.true;
     });
   
-    it('should return true for an empty arguments object', function () {
+    it('should return true for an empty arguments object', () =>  {
       function testFunction() {
         const result = isEmpty(arguments);
         expect(result).to.be.true;
@@ -72,7 +72,7 @@ describe('isEmpty', () => {
       expect(result).to.be.false;
     });
   
-    it('should return false for a non-empty arguments object', function () {
+    it('should return false for a non-empty arguments object', () => {
       function testFunction() {
         const result = isEmpty(arguments);
         expect(result).to.be.false;

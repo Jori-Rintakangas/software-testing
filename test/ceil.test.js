@@ -69,16 +69,16 @@ describe('ceil', () => {
     
     it('should return NaN when the input is undefined and precision is specified', () => {
       const result = ceil(undefined, 2);
-      expect(result).to.be.NaN; // Rounding undefined should result in NaN
+      expect(result).to.be.NaN; 
     });
     
     it('should return NaN when the input is null and precision is specified', () => {
       const result = ceil(null, 2);
-      expect(result).to.be.NaN; // Rounding null should result in NaN
+      expect(result).to.be.NaN; 
     });
     
     it('should return NaN when the input is NaN and precision is specified', () => {
       const result = ceil(NaN, 2);
-      expect(result).to.be.NaN; // Rounding NaN should result in NaN
+      expect(result).to.be.NaN; 
     });
   });

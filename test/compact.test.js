@@ -26,7 +26,6 @@ describe('compact', () => {
     it('should handle an array with no falsey including objects', () => {
       const inputArray = [1, 'hello', true, { key: 'value' }];
       const result = compact(inputArray);
-  
       expect(result).to.deep.equal([1, 'hello', true, { key: 'value' }]);
     });
   
@@ -34,8 +33,8 @@ describe('compact', () => {
       const inputArray = [0, 1, false, 2, '', 3, null, undefined, NaN, 4];
       const result = compact(inputArray);
   
-      expect(result).to.not.equal(inputArray); // Check if a new array is returned
-      expect(inputArray).to.deep.equal([0, 1, false, 2, '', 3, null, undefined, NaN, 4]); // Check if the original array is not modified
+      expect(result).to.not.equal(inputArray); 
+      expect(inputArray).to.deep.equal([0, 1, false, 2, '', 3, null, undefined, NaN, 4]); 
     });
   
     it('should handle an empty array', () => {

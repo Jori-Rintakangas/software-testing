@@ -53,7 +53,7 @@ describe('reduce', () => {
   
       const result = reduce(collection, iteratee, 0);
   
-      expect(result).to.equal(0); // Reducing an empty array with an initial accumulator should return the initial accumulator value
+      expect(result).to.equal(0); 
     });
   
     it('should handle a collection with a single element without an initial accumulator', () => {

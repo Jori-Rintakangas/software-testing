@@ -9,7 +9,7 @@ describe('filter', () => {
     });
   
     it('should filter elements based on the provided predicate', () => {
-      // Example predicate: Keep only even numbers
+     
       const predicate = (num) => num % 2 === 0;
   
       const inputArray = [1, 2, 3, 4, 5, 6];
@@ -19,7 +19,7 @@ describe('filter', () => {
     });
 
     it('should filter objects based on a property value', () => {
-        // Example predicate: Keep objects where the "type" property is "fruit"
+      
         const predicate = (obj) => obj.type === 'fruit';
     
         const inputArray = [
@@ -37,7 +37,7 @@ describe('filter', () => {
         ]);
     });
     it('should handle an array of objects with no matching objects', () => {
-        // Example predicate: Keep objects where the "color" property is "red"
+        
         const predicate = (obj) => obj.color === 'red';
     
         const inputArray = [
@@ -52,7 +52,7 @@ describe('filter', () => {
       });
     
       it('should handle an array with objects of different shapes', () => {
-        // Example predicate: Keep objects where the "shape" property is present
+        
         const predicate = (obj) => obj.shape !== undefined;
     
         const inputArray = [
@@ -74,11 +74,11 @@ describe('filter', () => {
   
       const result = filter(inputArray, predicate);
   
-      expect(result).to.not.equal(inputArray); // Check if a new array is returned
-      expect(inputArray).to.deep.equal([1, 2, 3, 4, 5]); // Check if the original array is not modified
+      expect(result).to.not.equal(inputArray); 
+      expect(inputArray).to.deep.equal([1, 2, 3, 4, 5]);
     });
     it('should filter based on the provided predicate for mixed data types', () => {
-        // Example predicate: Keep only strings
+        
         const predicate = (value) => typeof value === 'string';
     
         const inputArray = [1, 'two', 3, 'four', true, { key: 'value' }, null, undefined];
@@ -88,7 +88,7 @@ describe('filter', () => {
       });
     
       it('should handle an array with all elements being of the same data type', () => {
-        // Example predicate: Keep only numbers
+        
         const predicate = (value) => typeof value === 'number';
     
         const inputArray = [1, 2, 3, 4, 5];
@@ -98,7 +98,7 @@ describe('filter', () => {
       });
     
       it('should handle an array with a mix of data types and a predicate that always returns true', () => {
-        // Example predicate: Always return true
+        
         const predicate = () => true;
     
         const inputArray = [1, 'two', true, { key: 'value' }, null];
@@ -108,7 +108,7 @@ describe('filter', () => {
       });
     
       it('should handle an array with a mix of data types and a predicate that always returns false', () => {
-        // Example predicate: Always return false
+        
         const predicate = (value) => false;
     
         const inputArray = [1, 'two', true, { key: 'value' }, null];
