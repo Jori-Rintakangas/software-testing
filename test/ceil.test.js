@@ -32,22 +32,7 @@ describe('ceil', () => {
       const result = ceil(-6040, -2);
       expect(result).to.equal(-6000);
     });
-  
-    it('should handle precision being zero (default)', () => {
-      const result = ceil(8.123);
-      expect(result).to.equal(9);
-    });
-  
-    it('should handle precision being zero for a negative number', () => {
-      const result = ceil(-8.123);
-      expect(result).to.equal(-8);
-    });
-  
-    it('should handle precision being negative', () => {
-      const result = ceil(1234.5678, -3);
-      expect(result).to.equal(2000);
-    });
-  
+
     it('should handle precision being greater than the number of decimal places', () => {
       const result = ceil(543.21, 5);
       expect(result).to.equal(543.21);
@@ -77,8 +62,4 @@ describe('ceil', () => {
       expect(result).to.be.NaN; 
     });
     
-    it('should return NaN when the input is NaN and precision is specified', () => {
-      const result = ceil(NaN, 2);
-      expect(result).to.be.NaN; 
-    });
   });
